@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="772691295298-2gvf3p2fiolq390gpjin3o1d5skn4k2t.apps.googleusercontent.com">
+  <title>login</title>
+  </head>
   <body>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
      <button onclick="logingithub()">Login With Github</button> 
       <script>
     function logingithub() {
     POST https://github.com/login/device/code
       POST https://github.com/login/oauth/access_token
     }
+    <a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+
     </script>
     </body>
 </html>
