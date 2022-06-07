@@ -4,10 +4,10 @@
 if($_POST["message"]) {
 
 
-mail("your@email.address", "Here is the subject line",
+mail("thecoopsyttv@gmail.com", "Here is the subject line",
 
 
-$_POST["insert your message here"]. "From: an@email.address");
+$_POST["insert your message here"]. "From: thecoopsyt.public.email@gmail.com");
 
 
 }
